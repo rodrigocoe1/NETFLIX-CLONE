@@ -1,5 +1,5 @@
 const API_KEY = "b5821529d901d8d87be6105d01abb6b8";
-export const categories = [
+export const categories =[
     {
         name: "trending",
         title: "Em Alta",
@@ -7,7 +7,7 @@ export const categories = [
     },
     {
         name: "netflixOriginals",
-        title: "Originais Da Netflix",
+        title: "Originais Netflix",
         path: `discover/tv?api_key=${API_KEY}&with_networks=213`,
     },
     {
@@ -17,29 +17,27 @@ export const categories = [
     },
     {
         name: "comedy",
-        title: "Comedias",
+        title: "Comédias",
         path: `discover/tv?api_key=${API_KEY}&with_genres=35`,
     },
     {
         name: "romances",
-        title: "Romances",
+        title: "Romanticos",
         path: `discover/tv?api_key=${API_KEY}&with_genres=10749`,
     },
     {
         name: "documentaries",
-        title: "Documentarios",
-        path: `trending/all/week?api_key=${API_KEY}&with_genres=99`,
+        title: "Documentários ",
+        path: `discover/tv?api_key=${API_KEY}&with_genres=99`,
     },
-    
+];
 
-]
-export const getMovies = async (path)=>{
-    try{
-        let url = `https://api.themoviedb.org/3/&{path}`;
-        const response = awaitfetch(url);
+export const getMovies = async (path) =>{
+    try {
+        let url=`https:/api.themoviedb.org/3/${path}`;
+        const response = await fetch(url);
         return await response.json();
-    
     }catch(error){
-        console.log("erro no meu getMovies (API.JSK): ",error);
+        console.log("erro no meu getMovies (API.JSX): ",error);
     }
 }
