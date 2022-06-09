@@ -1,5 +1,5 @@
 .row-container{
-    margin-left: 30px;
+    margin-left: 20px;
     color:#fff;
 }
 .row-cards{
@@ -8,8 +8,26 @@
     overflow-x: scroll;
     padding: 20px;
 }
-.movie-card{
+.row-cards::-webkit-scrollbar{
+        display: none;
+}
+.movie-image{
+    object-fit: contain;
     width: 100%;
-    max-height: 100px;
+    max-height: 250px;
     margin-bottom: 10px;
+    transition: transform 450ms;
+}
+.movie-image-large{
+    object-fit: contain;
+    width: 100%;
+    max-height: 500px;
+    margin-bottom: 10px;
+    transition: transform 450ms;
+}
+*{
+    margin: 0;
+}
+.movie-image:hover{
+    transform: scale(1.08);
 }
