@@ -1,0 +1,9 @@
+.banner-container{
+    color: white;
+    object-fit: contain;
+    height: 448px;
+}
+.banner-content{
+    margin-left: 30px;
+    
+}
